@@ -37,7 +37,7 @@ const Preloader = () => {
                     transform: 'translate(-50%, -50%)',
                     fontWeight: 800, color: 'white', fontSize: '1.2rem'
                 }}>
-                    B.
+                    BotCamp
                 </div>
             </div>
 
@@ -47,10 +47,11 @@ const Preloader = () => {
                 transition={{ delay: 0.2 }}
                 style={{ marginTop: 20, color: '#94a3b8', fontSize: '0.9rem', letterSpacing: '2px' }}
             >
-                LOADING EXPERIENCE
+                Загрузка
             </motion.p>
         </motion.div>
     );
 };
+
 
 export default Preloader;
