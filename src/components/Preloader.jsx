@@ -18,41 +18,87 @@ const Preloader = () => {
                 flexDirection: 'column'
             }}
         >
-            <div style={{ position: 'relative', width: 80, height: 80 }}>
-                {/* Вращающееся кольцо */}
-                <motion.span
+            <div style={{
+                position: 'relative',
+                width: 160,
+                height: 160,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
+                {/* Минимальное вращающееся кольцо */}
+                <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ repeat: Infinity, duration: 1, ease: "linear" }}
+                    transition={{
+                        repeat: Infinity,
+                        duration: 1.8,
+                        ease: "linear"
+                    }}
                     style={{
-                        display: 'block', width: '100%', height: '100%',
+                        position: 'absolute',
+                        width: '100%',
+                        height: '100%',
                         borderRadius: '50%',
-                        border: '4px solid rgba(255,255,255,0.1)',
-                        borderTopColor: '#f59e0b'
+                        border: '2px solid rgba(255,255,255,0.1)',
+                        borderTop: '2px solidrgb(255, 255, 255)',
+                        borderRight: '2px solid rgba(255, 255, 255, 0.5)'
                     }}
                 />
 
-                {/* Логотип в центре */}
-                <div style={{
-                    position: 'absolute', top: '50%', left: '50%',
-                    transform: 'translate(-50%, -50%)',
-                    fontWeight: 800, color: 'white', fontSize: '1.2rem'
-                }}>
-                    BCamp
-                </div>
+                {/* Внутреннее кольцо */}
+                <motion.div
+                    animate={{ rotate: -360 }}
+                    transition={{
+                        repeat: Infinity,
+                        duration: 2.2,
+                        ease: "linear"
+                    }}
+                    style={{
+                        position: 'absolute',
+                        width: '70%',
+                        height: '70%',
+                        borderRadius: '50%',
+                        border: '1px solid rgba(255, 255, 255, 0.05)',
+                        borderBottom: '1px solid rgba(255, 255, 255, 0.5)',
+                        borderLeft: '1px solid hsla(0, 0.00%, 100.00%, 0.20)'
+                    }}
+                />
+
+                {/* Логотип по центру */}
+                <motion.div
+                    initial={{ scale: 0.95, opacity: 0 }}
+                    animate={{
+                        scale: 1,
+                        opacity: 1
+                    }}
+                    transition={{
+                        duration: 0.6,
+                        ease: "easeOut"
+                    }}
+                    style={{
+                        width: '80px',
+                        height: '80px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center'
+                    }}
+                >
+                    <img
+                        src="/botcamp_logo.png"
+                        alt="BotCamp Logo"
+                        style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'contain',
+                            filter: 'brightness(0) invert(1)',
+                            opacity: 0.9
+                        }}
+                    />
+                </motion.div>
             </div>
 
-            <motion.p
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.2 }}
-                style={{ marginTop: 20, color: '#94a3b8', fontSize: '0.9rem', letterSpacing: '2px' }}
-            >
-                Загрузка
-            </motion.p>
         </motion.div>
     );
 };
 
-
 export default Preloader;
-
