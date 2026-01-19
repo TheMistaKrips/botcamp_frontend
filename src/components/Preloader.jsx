@@ -37,7 +37,7 @@ const Preloader = () => {
                     transform: 'translate(-50%, -50%)',
                     fontWeight: 800, color: 'white', fontSize: '1.2rem'
                 }}>
-                    BotCamp
+                    BCamp
                 </div>
             </div>
 
@@ -55,3 +55,4 @@ const Preloader = () => {
 
 
 export default Preloader;
+
