@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BotCamp - Создай свой VPN сервис</title>
+    <meta name="description" content="Платформа для создания и управления собственным VPN-сервисом через Telegram-бота">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <style>
+      /* Preloader styles */
+      #root {
+        opacity: 0;
+        animation: fadeIn 0.5s ease forwards;
+      }
+      
+      @keyframes fadeIn {
+        to { opacity: 1; }
+      }
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
