@@ -150,7 +150,7 @@ const Hero = () => {
                         </div>
                     ) : (
                         /* DESKTOP 3D SCENE */
-                        <Spline scene="https://prod.spline.design/Z0kDvfQg5si07leT/scene.splinecode" />
+                        <Spline scene="https://prod.spline.design/xdU1BdUTk0jCg-o7/scene.splinecode" />
                     )}
                 </div>
 
